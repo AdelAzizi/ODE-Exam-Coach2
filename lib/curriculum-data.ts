@@ -15,9 +15,9 @@ export const CURRICULUM_MODULES: ModuleData[] = [
     lecturePages: 'صفحات ۱۵ تا ۲۲ جزوه',
     examRef: 'مسائل پایه و مثال‌های حل‌شده ۲.۴ و ۲.۷ جزوه',
     prerequisiteBridge: [
-      'محاسبه دترمینان ۲ در ۲: \\det \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc',
-      'یافتن ریشه‌های معادله درجه ۲ با دلتا: r = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}',
-      'فرمول اویلر برای اعداد مختلط: e^{i\\theta} = \\cos \\theta + i \\sin \\theta',
+      'محاسبه دترمینان ۲ در ۲: $\\det \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc$',
+      'یافتن ریشه‌های معادله درجه ۲ با دلتا: $r = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$',
+      'فرمول اویلر برای اعداد مختلط: $e^{i\\theta} = \\cos \\theta + i \\sin \\theta$',
     ],
     intuition: {
       summary:
@@ -28,7 +28,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         question:
           'اگر مقدار ویژه $r = 1 + 2i$ باشد و بردار ویژه مختلط متناظر آن v = \\begin{pmatrix} 1 \\\\ i \\end{pmatrix} باشد، بخش موهومی جواب X^{(2)}(t) = \\text{Im}(e^{rt}v) کدام است؟',
         hint: 'از رابطه e^{(1+2i)t} = e^t($\cos 2t$ + i\\sin 2t) استفاده کنید و در بردار ضرب کنید.',
-        answerLatex: 'X^{(2)}(t) = e^t \\begin{pmatrix} \\sin 2t \\\\ $\cos 2t$ \\end{pmatrix}',
+        answerLatex: 'X^{(2)}(t) = e^t \\begin{pmatrix} \\sin 2t \\\\ \cos 2t \\end{pmatrix}',
         answerExplanation:
           'با ضرب e^t($\cos 2t$ + i\\sin 2t) در سطر دوم یعنی i، جمله i$\cos 2t$ - \\sin 2t به دست می‌آید که ضریب i در آن $\cos 2t$ است.',
       },
@@ -60,7 +60,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
             'دترمینان ماتریس A - rI را مساوی صفر قرار می‌دهیم:',
           latex:
             '\\det(A - rI) = \\det \\begin{pmatrix} 1-r & 2 \\\\ -2 & 1-r \\end{pmatrix} = (1-r)^2 - (-4) = r^2 - 2r + 5 = 0',
-          scoringTip: 'همیشه دلتا یا فرم مربع کامل را واضح بنویسید: (r-1)^2 = -4 \\implies r = 1 $\pm 2i$.',
+          scoringTip: 'همیشه دلتا یا فرم مربع کامل را واضح بنویسید: $(r-1)^2 = -4 \\implies r = 1 \\pm 2i$.',
         },
         {
           stepNumber: 2,
@@ -70,23 +70,23 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           latex:
             '\\begin{pmatrix} -2i & 2 \\\\ -2 & -2i \\end{pmatrix} \\begin{pmatrix} v_1 \\\\ v_2 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix} \\implies -2i v_1 + 2 v_2 = 0 \\implies v_2 = i v_1',
           scoringTip:
-            'با قرار دادن $v_1 = 1$، بردار ویژه v = \\begin{pmatrix} 1 \\\\ i \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} + i \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix} به دست می‌آید.',
+            'با قرار دادن $v_1 = 1$، بردار ویژه $v = \\begin{pmatrix} 1 \\\\ i \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} + i \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$ به دست می‌آید.',
         },
         {
           stepNumber: 3,
           stepTitle: 'تشکیل جواب مختلط و بسط با فرمول اویلر',
           explanation:
-            'جواب مختلط را بر اساس e^{rt}v می‌نویسیم و به بخش‌های حقیقی و موهومی تفکیک می‌کنیم:',
+            'جواب مختلط را بر اساس $e^{rt}v$ می‌نویسیم و به بخش‌های حقیقی و موهومی تفکیک می‌کنیم:',
           latex:
-            'X_{comp}(t) = e^{(1+2i)t} \\begin{pmatrix} 1 \\\\ i \\end{pmatrix} = e^t ($\cos 2t$ + i \\sin 2t) \\begin{pmatrix} 1 \\\\ i \\end{pmatrix} = \\begin{pmatrix} e^t $\cos 2t$ + i e^t \\sin 2t \\\\ -e^t \\sin 2t + i e^t $\cos 2t$ \\end{pmatrix}',
+            'X_{comp}(t) = e^{(1+2i)t} \\begin{pmatrix} 1 \\\\ i \\end{pmatrix} = e^t (\\cos 2t + i \\sin 2t) \\begin{pmatrix} 1 \\\\ i \\end{pmatrix} = \\begin{pmatrix} e^t \\cos 2t + i e^t \\sin 2t \\\\ -e^t \\sin 2t + i e^t \\cos 2t \\end{pmatrix}',
         },
         {
           stepNumber: 4,
           stepTitle: 'جداسازی جواب‌های حقیقی و نوشتن جواب عمومی',
           explanation:
-            'بخش حقیقی X^{(1)} و بخش موهومی X^{(2)} را نوشته و ترکیب خطی آن‌ها را تشکیل می‌دهیم:',
+            'بخش حقیقی $X^{(1)}$ و بخش موهومی $X^{(2)}$ را نوشته و ترکیب خطی آن‌ها را تشکیل می‌دهیم:',
           latex:
-            'X(t) = c_1 e^t \\begin{pmatrix} $\cos 2t$ \\\\ -\\sin 2t \\end{pmatrix} + c_2 e^t \\begin{pmatrix} \\sin 2t \\\\ $\cos 2t$ \\end{pmatrix}',
+            'X(t) = c_1 e^t \\begin{pmatrix} \\cos 2t \\\\ -\\sin 2t \\end{pmatrix} + c_2 e^t \\begin{pmatrix} \\sin 2t \\\\ \\cos 2t \\end{pmatrix}',
           scoringTip:
             'حتماً ذکر کنید که c_1 و c_2 ثابت‌های دلخواه حقیقی هستند و جواب نهایی هیچ نماد موهومی i ندارد.',
         },
@@ -116,7 +116,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         {
           stepTitle: 'معادله مشخصه',
           description: '\\det(A-rI) = r^2 + 9 = 0 \\implies r = $\pm 3i$ (یعنی \\alpha = 0, \\beta = 3).',
-          latex: 'r = $\pm 3i$',
+          latex: 'r = \pm 3i',
         },
         {
           stepTitle: 'بردار ویژه متناظر r = 3i',
@@ -320,9 +320,9 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         'سوال ۶ میان‌ترم صراحتاً اثبات خاصیت جابه‌جایی $e^{At}B = Be^{At}$ بود، و سوال ۵ محاسبه $e^{At}$ با استفاده از ماتریس اساسی بود.',
       microCheck: {
         question:
-          'اگر تابع کمکی F(t) = $e^{At}$ B $e^{-At}$ را تعریف کنیم، مشتق F\'(t) با فرض $AB = BA$ برابر چیست؟',
+          'اگر تابع کمکی $F(t) = e^{At} B e^{-At}$ را تعریف کنیم، مشتق $F\'(t)$ با فرض $AB = BA$ برابر چیست؟',
         hint: 'از مشتق ضرب استفاده کنید و $e^{At}$ و $e^{-At}$ را فاکتور بگیرید.',
-        answerLatex: 'F\'(t) = $e^{At}$(AB - BA)$e^{-At}$ = 0_{n \\times n}',
+        answerLatex: "F'(t) = e^{At}(AB - BA)e^{-At} = 0_{n \\times n}",
         answerExplanation:
           'چون F\'(t) = 0 است، تابع F(t) ماتریس ثابت است. با قرار دادن t=0 نتیجه می‌شود F(t) = F(0) = B و لذا $e^{At}B = Be^{At}$. این کوتاه‌ترین و شیک‌ترین اثبات امتحانی است!',
       },
@@ -331,7 +331,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
       {
         title: 'ارتباط ماتریس اساسی و تابع نمایی (قضیه ۲.۱۵ جزوه)',
         theoremName: 'فرمول ماتریس نمایی',
-        latex: '$e^{At}$ = $\psi(t)$ $\psi^{-1}(0)$',
+        latex: 'e^{At} = \psi(t) \psi^{-1}(0)',
         conditions: [
           '$\psi(t)$ یک ماتریس اساسی دستگاه $\dot{X} = AX$ است (ستون‌های آن مستقل خطی هستند).',
           '\\det $\psi(t)$ \\ne 0 به ازای تمام t.',
@@ -341,7 +341,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         title: 'فرمول روش تغییر پارامترها برای دستگاه ناهمگن (صفحه ۲۷ جزوه)',
         theoremName: 'جواب خصوصی دستگاه ناهمگن',
         latex:
-          'X(t) = $\psi(t)$C + $\psi(t)$ \\int \\psi^{-1}(t) g(t) \\, dt',
+          'X(t) = \psi(t)C + \psi(t) \\int \\psi^{-1}(t) g(t) \\, dt',
         conditions: [
           'دستگاه به فرم $\dot{X} = AX$ + g(t) است.',
           'فرض می‌کنیم X_p(t) = $\psi(t)$ U(t) و به رابطه $\psi(t)$\\dot{U}(t) = g(t) می‌رسیم.',
@@ -360,7 +360,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'تعریف سری ماتریس نمایی را می‌نویسیم و B را ضرب می‌کنیم:',
           latex:
-            '$e^{At}B$ = \\left( \\sum_{n=0}^\\infty \\frac{t^n}{n!} A^n \\right) B = \\sum_{n=0}^\\infty \\frac{t^n}{n!} (A^n B)',
+            'e^{At}B = \\left( \\sum_{n=0}^\\infty \\frac{t^n}{n!} A^n \\right) B = \\sum_{n=0}^\\infty \\frac{t^n}{n!} (A^n B)',
         },
         {
           stepNumber: 2,
@@ -378,7 +378,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'معادله مشخصه را تشکیل می‌دهیم:',
           latex:
-            '\\det(A - rI) = \\begin{vmatrix} 3-r & 5 \\\\ -5 & -3-r \\end{vmatrix} = -(9 - r^2) + 25 = r^2 + 16 = 0 \\implies r = $\pm 4i$',
+            '\\det(A - rI) = \\begin{vmatrix} 3-r & 5 \\\\ -5 & -3-r \\end{vmatrix} = -(9 - r^2) + 25 = r^2 + 16 = 0 \\implies r = \pm 4i',
         },
         {
           stepNumber: 4,
@@ -394,7 +394,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'ستون‌های $\psi(t)$ بخش حقیقی و موهومی جواب هستند:',
           latex:
-            '$\psi(t)$ = \\begin{pmatrix} 5\\cos 4t & 5\\sin 4t \\\\ -3\\cos 4t - 4\\sin 4t & -3\\sin 4t + 4\\cos 4t \\end{pmatrix}',
+            '\psi(t) = \\begin{pmatrix} 5\\cos 4t & 5\\sin 4t \\\\ -3\\cos 4t - 4\\sin 4t & -3\\sin 4t + 4\\cos 4t \\end{pmatrix}',
         },
         {
           stepNumber: 6,
@@ -402,7 +402,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'در نقطه t = 0 مقدار ماتریس اساسی را به دست می‌آوریم:',
           latex:
-            '$\psi(0)$ = \\begin{pmatrix} 5 & 0 \\\\ -3 & 4 \\end{pmatrix} \\implies \\det $\psi(0)$ = 20 \\implies $\psi^{-1}(0)$ = \\frac{1}{20} \\begin{pmatrix} 4 & 0 \\\\ 3 & 5 \\end{pmatrix}',
+            '\psi(0) = \\begin{pmatrix} 5 & 0 \\\\ -3 & 4 \\end{pmatrix} \\implies \\det \psi(0) = 20 \\implies \psi^{-1}(0) = \\frac{1}{20} \\begin{pmatrix} 4 & 0 \\\\ 3 & 5 \\end{pmatrix}',
         },
         {
           stepNumber: 7,
@@ -410,7 +410,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'با ضرب دو ماتریس:',
           latex:
-            '$e^{At}$ = $\psi(t)$ $\psi^{-1}(0)$ = \\begin{pmatrix} \\cos 4t + \\frac{3}{4}\\sin 4t & \\frac{5}{4}\\sin 4t \\\\ -\\frac{5}{4}\\sin 4t & \\cos 4t - \\frac{3}{4}\\sin 4t \\end{pmatrix}',
+            'e^{At} = \psi(t) \psi^{-1}(0) = \\begin{pmatrix} \\cos 4t + \\frac{3}{4}\\sin 4t & \\frac{5}{4}\\sin 4t \\\\ -\\frac{5}{4}\\sin 4t & \\cos 4t - \\frac{3}{4}\\sin 4t \\end{pmatrix}',
           scoringTip:
             'آزمون سریع صحت: برای t=0 بررسی کنید که آیا ماتریس همانی I به دست می‌آید یا نه! اینجا \\cos 0 = 1 و \\sin 0 = 0 که دقیقاً I میگردد.',
         },
@@ -448,7 +448,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         },
       ],
       finalAnswer:
-        '$e^{At}$ = e^{3t} \\begin{pmatrix} 1 - t & -t \\\\ t & 1 + t \\end{pmatrix}',
+        'e^{At} = e^{3t} \\begin{pmatrix} 1 - t & -t \\\\ t & 1 + t \\end{pmatrix}',
     },
   },
 
@@ -466,9 +466,9 @@ export const CURRICULUM_MODULES: ModuleData[] = [
     lecturePages: 'صفحات ۲ تا ۸ جزوه',
     examRef: 'سوال ۳ نمونه‌سوالات میان‌ترم و تمرین ۱.۸ جزوه',
     prerequisiteBridge: [
-      'انتگرال توابع چندجمله‌ای: \\int t^n dt = \\frac{t^{n+1}}{n+1}',
-      'بسط مک‌لورن تابع نمایی: e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}',
-      'تعریف شرط لیپشیتز نسبت به y: |f(x, y_1) - f(x, y_2)| \\le L |y_1 - y_2|',
+      'انتگرال توابع چندجمله‌ای: $\\int t^n dt = \\frac{t^{n+1}}{n+1}$',
+      'بسط مک‌لورن تابع نمایی: $e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}$',
+      'تعریف شرط لیپشیتز نسبت به y: $|f(x, y_1) - f(x, y_2)| \\le L |y_1 - y_2|$',
     ],
     intuition: {
       summary:
@@ -489,7 +489,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         title: 'رابطه بازگشتی تقریب‌های متوالی پیکارد (صفحه ۴ جزوه)',
         theoremName: 'فرمول تکرار پیکارد',
         latex:
-          'y_0(x) = y_0, \\quad y_{n+1}(x) = y_0 + \\int_{$x_0$}^x f(t, y_n(t)) \\, dt',
+          'y_0(x) = y_0, \\quad y_{n+1}(x) = y_0 + \\int_{x_0}^x f(t, y_n(t)) \\, dt',
         conditions: [
           'f روی مستطیل R پیوسته و نسبت به y با ثابت L لیپشیتز باشد.',
           'جواب در بازه |x - $x_0$| \\le h با h = \\min(a, b/M) یکتا است.',
@@ -509,7 +509,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
       problemStatement:
         'مسئله مقدار اولیه y\' = \\sqrt{|y|}, $y(0) = 0$ را در نظر بگیرید:\nالف) نشان دهید توابع y_1(x) \\equiv 0 و y_2(x) = \\begin{cases} 0 & x \\le 0 \\\\ x^2/4 & x > 0 \\end{cases} هر دو جواب مسئله هستند.\nب) توضیح دهید چرا این مثال قضیه وجود و یکتایی پیکارد را نقض نمی‌کند؟ (عین سوال ۳ میان‌ترم)',
       problemLatex:
-        'y\' = \\sqrt{|y|}, \\quad $y(0) = 0$',
+        "y' = \\sqrt{|y|}, \\quad y(0) = 0",
       steps: [
         {
           stepNumber: 1,
@@ -614,7 +614,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         question:
           'اگر در نامساوی انتگرالی u(x) \\le A + B \\int_{$x_0$}^x u(t) dt مقدار ثابت A برابر صفر باشد، لم گرونوال چه نتیجه‌ای می‌دهد؟',
         hint: 'به رابطه u(x) \\ge 0 برای قدرمطلق دقت کنید.',
-        answerLatex: 'u(x) \\le 0 \\cdot e^{B|x-$x_0$|} = 0 \\implies u(x) \\equiv 0',
+        answerLatex: 'u(x) \\le 0 \\cdot e^{B|x-x_0|} = 0 \\implies u(x) \\equiv 0',
         answerExplanation:
           'چون u(x) همواره نامنفی است و همزمان \\le 0 شده است، تنها مقدار ممکن صفر مطلق است. این کلید اثبات یکتایی جواب است.',
       },
@@ -624,7 +624,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         title: 'صورت دقیق لم گرونوال (لم ۱.۹ جزوه)',
         theoremName: 'Gronwall\'s Inequality',
         latex:
-          'u(x) \\le A + B \\left| \\int_{$x_0$}^x u(t) \\, dt \\right| \\implies u(x) \\le A e^{B|x - $x_0$|}',
+          'u(x) \\le A + B \\left| \\int_{x_0}^x u(t) \\, dt \\right| \\implies u(x) \\le A e^{B|x - x_0|}',
         conditions: [
           'u(x) پیوسته و نامنفی (u(x) \\ge 0) روی بازه I شامل $x_0$.',
           'A و B ثابت‌های نامنفی هستند (A, B \\ge 0).',
@@ -634,7 +634,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         title: 'قضیه وابستگی به شرط اولیه (قضیه ۱.۱۰ جزوه)',
         theoremName: 'پیوستگی نسبت به داده‌های اولیه',
         latex:
-          '|\\phi(x) - \\psi(x)| \\le |y_0 - \\hat{y}_0| e^{L|x - $x_0$|}',
+          '|\\phi(x) - \\psi(x)| \\le |y_0 - \\hat{y}_0| e^{L|x - x_0|}',
         conditions: [
           '\\phi جواب با مقدار اولیه y($x_0$) = y_0 و \\psi جواب با مقدار اولیه y($x_0$) = \\hat{y}_0 است.',
           'L ثابت لیپشیتز تابع f است.',
@@ -645,7 +645,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
       problemStatement:
         'الف) لم گرونوال را اثبات کنید.\nب) نشان دهید اگر f در شرط لیپشیتز صدق کند، معادله انتگرالی y(x) = 1 + \\int_3^x f(t,y(t))dt حداکثر یک جواب دارد (سوال ۱ میان‌ترم).\nج) اثبات قضیه جابه‌جایی نقطه شروع از $x_0$ به $x_1$ (سوال ۲ میان‌ترم).',
       problemLatex:
-        '|y(x) - \\tilde{y}(x)| \\le M|$x_1$ - $x_0$| e^{L|x - $x_1$|}',
+        '|y(x) - \\tilde{y}(x)| \\le M|x_1 - x_0| e^{L|x - x_1|}',
       steps: [
         {
           stepNumber: 1,
@@ -653,7 +653,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'فرض می‌کنیم x \\ge $x_0$. تابع کمکی W(x) = A + B \\int_{$x_0$}^x u(t)dt را تعریف می‌کنیم:',
           latex:
-            'W($x_0$) = A, \\quad u(x) \\le W(x), \\quad W\'(x) = B u(x) \\le B W(x) \\implies W\'(x) - B W(x) \\le 0',
+            'W(x_0) = A, \\quad u(x) \\le W(x), \\quad W\'(x) = B u(x) \\le B W(x) \\implies W\'(x) - B W(x) \\le 0',
         },
         {
           stepNumber: 2,
@@ -661,7 +661,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'طرفین را در e^{-Bx} ضرب کرده و از $x_0$ تا x انتگرال می‌گیریم:',
           latex:
-            '(e^{-Bx}W(x))\' \\le 0 \\implies e^{-Bx}W(x) - e^{-B$x_0$}W($x_0$) \\le 0 \\implies W(x) \\le A e^{B(x - $x_0$)}',
+            "(e^{-Bx}W(x))' \\le 0 \\implies e^{-Bx}W(x) - e^{-Bx_0}W(x_0) \\le 0 \\implies W(x) \\le A e^{B(x - x_0)}",
           scoringTip:
             'چون u(x) \\le W(x) است، پس u(x) \\le A e^{B(x-$x_0$)} ثابت شد. برای x < $x_0$ اثبات دقیقاً با تغییر علامت مشابه است.',
         },
@@ -688,7 +688,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'داریم y(x) = y_0 + \\int_{$x_0$}^x f(t,y)dt و \\tilde{y}(x) = y_0 + \\int_{$x_1$}^x f(t,\\tilde{y})dt. بدون کاستن از کلیت فرض می‌کنیم $x_0$ < $x_1$:',
           latex:
-            'y(x) - \\tilde{y}(x) = \\int_{$x_0$}^x f(t,y)dt - \\int_{$x_1$}^x f(t,\\tilde{y})dt = \\int_{$x_0$}^{$x_1$} f(t,y)dt + \\int_{$x_1$}^x [f(t,y) - f(t,\\tilde{y})]dt',
+            'y(x) - \\tilde{y}(x) = \\int_{x_0}^x f(t,y)dt - \\int_{x_1}^x f(t,\\tilde{y})dt = \\int_{x_0}^{x_1} f(t,y)dt + \\int_{x_1}^x [f(t,y) - f(t,\\tilde{y})]dt',
         },
         {
           stepNumber: 6,
@@ -696,7 +696,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'چون f با M کراندار است و نسبت به y با ثابت L لیپشیتز است:',
           latex:
-            '|y(x) - \\tilde{y}(x)| \\le M($x_1$ - $x_0$) + L \\int_{$x_1$}^x |y(t) - \\tilde{y}(t)| dt',
+            '|y(x) - \\tilde{y}(x)| \\le M(x_1 - x_0) + L \\int_{x_1}^x |y(t) - \\tilde{y}(t)| dt',
           scoringTip:
             'طبق لم گرونوال با A = M($x_1$ - $x_0$) و B = L و نقطه مبنای $x_1$:\n|y(x) - \\tilde{y}(x)| \\le M|$x_1$ - $x_0$| e^{L|x - $x_1$|}. حکم ثابت شد!',
         },
@@ -774,7 +774,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         title: 'عامل خودالحاق‌کننده (قضیه ۳.۵ جزوه)',
         theoremName: 'تبدیل به فرم استاندارد اشتورم-لیوویل',
         latex:
-          '$\mu(t)$ = \\frac{1}{a_0(t)} \\exp\\left( \\int \\frac{a_1(t)}{a_0(t)} \\, dt \\right) \\implies \\frac{d}{dt}[P(t)\\dot{x}] + Q(t)x = 0',
+          '\mu(t) = \\frac{1}{a_0(t)} \\exp\\left( \\int \\frac{a_1(t)}{a_0(t)} \\, dt \\right) \\implies \\frac{d}{dt}[P(t)\\dot{x}] + Q(t)x = 0',
         conditions: [
           'a_0(t) \\ne 0 روی بازه I.',
           'P(t) = \\exp(\\int \\frac{a_1}{a_0}dt) و Q(t) = \\frac{a_2}{a_0} P(t).',
@@ -819,7 +819,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'ادعا می‌کنیم حتماً نقطه‌ای مانند t^* > t_m وجود دارد که \\dot{x}(t^*) < 0 باشد. زیرا اگر برای تمام t > t_m شیب $\dot{x}(t)$ \\ge 0 بماند، چون \\dot{x} نزولی و کراندار از پایین به صفر است، \\dot{x} به حدی L \\ge 0 میل می‌کند. اما با انتگرال‌گیری از $\ddot{x} = -(t+1)x$ داریم:',
           latex:
-            '$\dot{x}(t)$ - \\dot{x}(t_m+1) = -\\int_{t_m+1}^t (s+1)x(s) ds \\le -x(t_m+1) \\int_{t_m+1}^t (s+1)ds \\to -\\infty',
+            '\dot{x}(t) - \\dot{x}(t_m+1) = -\\int_{t_m+1}^t (s+1)x(s) ds \\le -x(t_m+1) \\int_{t_m+1}^t (s+1)ds \\to -\\infty',
         },
         {
           stepNumber: 5,
@@ -894,20 +894,20 @@ export const CURRICULUM_MODULES: ModuleData[] = [
         'سوال ۸ میان‌ترم ۳ بخش داشت: الف) عدم وجود صفر مشترک، ب) اکیداً یکنوا بودن R(x)، ج) نگاشت یک‌به‌یک R(x) از ($x_1$, x_2) به $\mathbb{R}$. این سوال تمام عیار است.',
       microCheck: {
         question:
-          'مشتق تابع R(x) = \\frac{y_2(x)}{y_1(x)} بر حسب رونسکین $W(y_1, y_2)$ برابر چیست؟',
-        hint: 'از مشتق کسری استفاده کنید و فرمول $W(y_1, y_2)$ = y_1 y_2\' - y_1\' y_2 را جایگزین کنید.',
-        answerLatex: 'R\'(x) = \\frac{y_2\' y_1 - y_1\' y_2}{y_1^2} = \\frac{-$W(y_1, y_2)$(x)}{y_1(x)^2}',
+          'مشتق تابع $R(x) = \\frac{y_2(x)}{y_1(x)}$ بر حسب رونسکین $W(y_1, y_2)$ برابر چیست؟',
+        hint: "از مشتق کسری استفاده کنید و فرمول $W(y_1, y_2) = y_1 y_2' - y_1' y_2$ را جایگزین کنید.",
+        answerLatex: "R'(x) = \\frac{y_2' y_1 - y_1' y_2}{y_1^2} = \\frac{-W(y_1, y_2)(x)}{y_1(x)^2}",
         answerExplanation:
-          'دقت کنید که y_2\' y_1 - y_1\' y_2 قرینه فرمول استاندارد رونسکین است، بنابراین یک علامت منفی ظاهر می‌شود.',
+          "دقت کنید که $y_2' y_1 - y_1' y_2$ قرینه فرمول استاندارد رونسکین است، بنابراین یک علامت منفی ظاهر می‌شود.",
       },
     },
     formalTools: [
       {
         title: 'فرمول آبل برای معادلات اشتورم-لیوویل (قضیه ۳.۷ جزوه)',
-        theoremName: 'Abel\'s Formula',
+        theoremName: "Abel's Formula",
         latex: 'P(t) W(f,g)(t) = k \\quad (k = \\text{const.})',
         conditions: [
-          'f و g دو جواب معادله (P(t)\\dot{x})\' + Q(t)x = 0 هستند.',
+          'f و g دو جواب معادله $(P(t)\\dot{x})\' + Q(t)x = 0$ هستند.',
           'اگر f و g در یک نقطه صفر مشترک داشته باشند، k = 0 و توابع وابسته خطی‌اند.',
         ],
       },
@@ -924,35 +924,35 @@ export const CURRICULUM_MODULES: ModuleData[] = [
     ],
     examWalkthrough: {
       problemStatement:
-        'معادله دیفرانسیل خطی همگن y\'\' + p(x)y\' + q(x)y = 0 را در نظر بگیرید که در آن p و q پیوسته‌اند. فرض کنید y_1 و y_2 دو جواب مستقل خطی باشند:\nالف) ثابت کنید y_1 و y_2 صفر مشترک ندارند.\nب) ثابت کنید تابع R(x) = \\frac{y_2(x)}{y_1(x)} روی بازه ($x_1$, x_2) که $x_1$, x_2 ریشه‌های متوالی y_1 هستند، اکیداً یکنواست.\nج) ثابت کنید R(x) تابعی یک‌به‌یک از ($x_1$, x_2) به $\mathbb{R}$ است (عین سوال ۸ میان‌ترم).',
+        'معادله دیفرانسیل خطی همگن $y\'\' + p(x)y\' + q(x)y = 0$ را در نظر بگیرید که در آن p و q پیوسته‌اند. فرض کنید $y_1$ و $y_2$ دو جواب مستقل خطی باشند:\nالف) ثابت کنید $y_1$ و $y_2$ صفر مشترک ندارند.\nب) ثابت کنید تابع $R(x) = \\frac{y_2(x)}{y_1(x)}$ روی بازه $(x_1, x_2)$ که $x_1, x_2$ ریشه‌های متوالی $y_1$ هستند، اکیداً یکنواست.\nج) ثابت کنید $R(x)$ تابعی یک‌به‌یک از $(x_1, x_2)$ به $\\mathbb{R}$ است (عین سوال ۸ میان‌ترم).',
       problemLatex:
-        'R(x) = \\frac{y_2(x)}{y_1(x)}, \\quad x \\in ($x_1$, x_2)',
+        'R(x) = \\frac{y_2(x)}{y_1(x)}, \\quad x \\in (x_1, x_2)',
       steps: [
         {
           stepNumber: 1,
           stepTitle: 'اثبات قسمت (الف): عدم وجود صفر مشترک',
           explanation:
-            'به برهان خلف فرض می‌کنیم نقطه $x_0$ صفر مشترک باشد، یعنی y_1($x_0$) = 0 و y_2($x_0$) = 0. مقدار رونسکین در $x_0$:',
+            'به برهان خلف فرض می‌کنیم نقطه $x_0$ صفر مشترک باشد، یعنی $y_1(x_0) = 0$ و $y_2(x_0) = 0$. مقدار رونسکین در $x_0$:',
           latex:
-            '$W(y_1, y_2)$($x_0$) = y_1($x_0$)y_2\'($x_0$) - y_1\'($x_0$)y_2($x_0$) = 0 \\cdot y_2\'($x_0$) - y_1\'($x_0$) \\cdot 0 = 0',
+            "W(y_1, y_2)(x_0) = y_1(x_0)y_2'(x_0) - y_1'(x_0)y_2(x_0) = 0 \\cdot y_2'(x_0) - y_1'(x_0) \\cdot 0 = 0",
           scoringTip:
-            'طبق فرمول آبل، چون W($x_0$) = 0 است، رونسکین در تمام بازه صفر مطلق می‌شود (W(x) \\equiv 0). اما این با فرض مستقل خطی بودن y_1 و y_2 در تناقض است! بنابراین فرض خلف باطل است و صفر مشترک ندارند.',
+            'طبق فرمول آبل، چون $W(x_0) = 0$ است، رونسکین در تمام بازه صفر مطلق می‌شود ($W(x) \\equiv 0$). اما این با فرض مستقل خطی بودن $y_1$ و $y_2$ در تناقض است! بنابراین فرض خلف باطل است و صفر مشترک ندارند.',
         },
         {
           stepNumber: 2,
           stepTitle: 'اثبات قسمت (ب): اکیداً یکنوا بودن R(x)',
           explanation:
-            'چون $x_1$ و x_2 دو ریشه متوالی y_1 هستند، تابع y_1(x) در بازه باز ($x_1$, x_2) هرگز صفر نمی‌شود، پس R(x) پیوسته و مشتق‌پذیر است. مشتق می‌گیریم:',
+            'چون $x_1$ و $x_2$ دو ریشه متوالی $y_1$ هستند، تابع $y_1(x)$ در بازه باز $(x_1, x_2)$ هرگز صفر نمی‌شود، پس $R(x)$ پیوسته و مشتق‌پذیر است. مشتق می‌گیریم:',
           latex:
-            'R\'(x) = \\left( \\frac{y_2(x)}{y_1(x)} \\right)\' = \\frac{y_2\'(x)y_1(x) - y_1\'(x)y_2(x)}{y_1(x)^2} = \\frac{-$W(y_1, y_2)$(x)}{y_1(x)^2}',
+            "R'(x) = \\left( \\frac{y_2(x)}{y_1(x)} \\right)' = \\frac{y_2'(x)y_1(x) - y_1'(x)y_2(x)}{y_1(x)^2} = \\frac{-W(y_1, y_2)(x)}{y_1(x)^2}",
         },
         {
           stepNumber: 3,
           stepTitle: 'بررسی علامت مشتق و نتیجه یکنوایی اکید',
           explanation:
-            'چون y_1 و y_2 مستقل خطی هستند، $W(y_1, y_2)$(x) هیچ‌گاه صفر نمی‌شود و طبق قضیه مقدار میانی علامت ثابتی دارد (یا همواره مثبت یا همواره منفی). همچنین مخرج y_1(x)^2 اکیداً مثبت است، بنابراین مشتق همواره هم‌علامت است و R(x) اکیداً یکنواست:',
+            'چون $y_1$ و $y_2$ مستقل خطی هستند، $W(y_1, y_2)(x)$ هیچ‌گاه صفر نمی‌شود و طبق قضیه مقدار میانی علامت ثابتی دارد (یا همواره مثبت یا همواره منفی). همچنین مخرج $y_1(x)^2$ اکیداً مثبت است، بنابراین مشتق همواره هم‌علامت است و $R(x)$ اکیداً یکنواست:',
           latex:
-            'R\'(x) \\ne 0 \\quad (\\forall x \\in ($x_1$, x_2)) \\implies R(x) \\text{ is strictly monotonic}',
+            "R'(x) \\ne 0 \\quad (\\forall x \\in (x_1, x_2)) \\implies R(x) \\text{ is strictly monotonic}",
         },
         {
           stepNumber: 4,
@@ -960,7 +960,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'هر تابع اکیداً یکنوا ذاتاً یک‌به‌یک (Injective) است. حالا برای اثبات اینکه برد آن تمام $\mathbb{R}$ است، حدهای دو سر بازه را حساب می‌کنیم:',
           latex:
-            '\\lim_{x \\to $x_1$^+} R(x) = \\lim_{x \\to $x_1$^+} \\frac{y_2(x)}{y_1(x)}, \\quad \\lim_{x \\to x_2^-} R(x) = \\lim_{x \\to x_2^-} \\frac{y_2(x)}{y_1(x)}',
+            '\\lim_{x \\to x_1^+} R(x) = \\lim_{x \\to x_1^+} \\frac{y_2(x)}{y_1(x)}, \\quad \\lim_{x \\to x_2^-} R(x) = \\lim_{x \\to x_2^-} \\frac{y_2(x)}{y_1(x)}',
         },
         {
           stepNumber: 5,
@@ -968,7 +968,7 @@ export const CURRICULUM_MODULES: ModuleData[] = [
           explanation:
             'طبق قسمت (الف)، y_2($x_1$) \\ne 0 و y_2(x_2) \\ne 0 است، در حالی که مخرج‌ها به سمت صفر میل می‌کنند. چون y_1 بین دو ریشه علامت ثابتی دارد، مشتق‌های y_1\'($x_1$) و y_1\'(x_2) علامت‌های مخالف دارند:',
           latex:
-            '\\lim_{x \\to $x_1$^+} R(x) = -\\infty, \\quad \\lim_{x \\to x_2^-} R(x) = +\\infty',
+            '\\lim_{x \\to x_1^+} R(x) = -\\infty, \\quad \\lim_{x \\to x_2^-} R(x) = +\\infty',
           scoringTip:
             'چون R(x) پیوسته است، طبق قضیه مقدار میانی (IVT) تمام مقادیر بین -\\infty تا +\\infty یعنی تمام $\mathbb{R}$ را می‌پوشاند (پوشا). پس R(x) یک نگاشت یک‌به‌یک و پوشا (بایژکشن) از ($x_1$, x_2) به $\mathbb{R}$ است.',
         },
@@ -1051,7 +1051,7 @@ export const SAFETY_NET_THEOREMS: SafetyNetTheorem[] = [
       },
     ],
     examTip:
-      'استاد به ذکر صریح نام «قضیه بولتزانو-وایرشتراس» و نوشتن حد تعریف مشتق \\frac{f(\\tilde{t}_n) - f(t_0)}{\\tilde{t}_n - t_0} حساس است.',
+      'استاد به ذکر صریح نام «قضیه بولتزانو-وایرشتراس» و نوشتن حد تعریف مشتق $\\frac{f(\\tilde{t}_n) - f(t_0)}{\\tilde{t}_n - t_0}$ حساس است.',
   },
   {
     id: 'safety-2',
@@ -1073,7 +1073,7 @@ export const SAFETY_NET_THEOREMS: SafetyNetTheorem[] = [
         explanation:
           'در مرحله دوم اثبات پیکارد با استقرا نشان داده شده است که:',
         latex:
-          '|y_n(x) - y_{n-1}(x)| \\le \\frac{M}{L} \\frac{L^n}{n!} |x - $x_0$|^n \\le \\frac{M}{L} \\frac{(Lh)^n}{n!} = M_n',
+          '|y_n(x) - y_{n-1}(x)| \\le \\frac{M}{L} \\frac{L^n}{n!} |x - x_0|^n \\le \\frac{M}{L} \\frac{(Lh)^n}{n!} = M_n',
       },
       {
         stepTitle: 'اعمال آزمون M وایرشتراس (Weierstrass M-Test)',
@@ -1126,6 +1126,6 @@ export const SAFETY_NET_THEOREMS: SafetyNetTheorem[] = [
       },
     ],
     examTip:
-      'حرکت کلیدی در این اثبات، ضرب معادله دوم در \\frac{\\phi^2}{\\psi} است که به تشکیل مربع کامل \\frac{(\\dot{\\phi}\\psi - \\phi\\dot{\\psi})^2}{\\psi^2} منتهی می‌شود.',
+      'حرکت کلیدی در این اثبات، ضرب معادله دوم در $\\frac{\\phi^2}{\\psi}$ است که به تشکیل مربع کامل $\\frac{(\\dot{\\phi}\\psi - \\phi\\dot{\\psi})^2}{\\psi^2}$ منتهی می‌شود.',
   },
 ];
